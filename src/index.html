@@ -1,76 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>CAFECHAIN</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        table, th, td {
-          border: 1px solid black;
-        }
-        </style>
-  </head>
-  <body>
-    <div class="main-container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-8 col-sm-push-2">
-          <h1 class="text-center">CAFE CHAIN </h1>
-          <hr/>
-          <br/>
-        </div>
-      </div>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-      <div id="petsRow" class="row">
-        <div class="col-sm-6 col-sm-push-3 col-md-4 col-md-push-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h2 class="panel-title">My Store</h2>
-            </div>
-            <div class="main-container">
-              
 
-              <h3>Enter the items to add</h3>
-              
-              
-              <input type="text" class="form-control" id="AddItem" placeholder="name" />
-              <input type="text" class="form-control" id="AddValue"placeholder="value" />
-              <input type="button" id="submit" value="submit">
-              
-	      
-            </div>
-          </div>
-         
-            </div>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 col-sm-push-2">
+            <h1 class="text-center">CAFECHAIN</h1>
+            <hr/>
+            <br/>
           </div>
         </div>
-        
-    <table style="width:50%">
-        <tr>
-          <th>Itemname</th>
-          <th>Value</th>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td><input type="button" id="select" value="selectitem"></td>
-            <td><input type="text" class="form-control" id="valuerequired" placeholder="value" ></td>
-            <td><input type="button" id="transfer" value="transfer"></td> 
-          </tr>
-      </table> 
-      
+  
+        <div id="menuRow" class="row">
    
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/web3.min.js"></script>
-    <script src="js/truffle-contract.js"></script>
-    <script src="js/index.js"></script>
 
-  </body>
+<h2>Take a Menu</h2>
+
+<table>
+  <tr>
+    <th><div class="product-name">product</div></th>
+    <th><div class="product-amount"></div> amount</th>
+    <th><div class="product-count"></div> Order count</th>
+    <th><div class="product-select"></div> selct here</th>
+    <th>payment</th>
+    <th>order status</th>
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td></td>
+    <td><button class="btn btn-primary" id="selectButton" type="button">select</button></td>
+        <td><input type="text" class="form-control" id="AmountofItem"placeholder="----" />
+        <button class="btn btn-primary" id="payButton" type="button">pay</button></td>
+        <td><button class="btn btn-primary" id="confirmButton" type="button">finish Order</button></td>
+  </tr>
+  <tr>
+    <td>  </td>
+    <td> </td>
+    <td></td>
+    <td><button class="btn btn-primary" id="selectButton" type="button">select</button></td>
+        <td><input type="text" class="form-control" id="AmountofItem"placeholder="----" />
+        <button class="btn btn-primary" id="payButton" type="button">pay</button></td>
+        <td><button class="btn btn-primary" id="confirmButton" type="button">finish Order</button></td>
+
+  </tr>
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td></td>
+    <td><button class="btn btn-primary" id="selectButton" type="button">select</button></td>
+        <td><input type="text" class="form-control" id="AmountofItem"placeholder="----" />
+        <button class="btn btn-primary" id="payButton" type="button">pay</button></td>
+        <td><button class="btn btn-primary" id="confirmButton" type="button">finish Order</button></td>
+
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><button class="btn btn-primary" id="selectButton" type="button">select</button></td>
+        <td><input type="text" class="form-control" id="AmountofItem"placeholder="----" />
+        <button class="btn btn-primary" id="payButton" type="button">pay</button></td>
+        <td><button class="btn btn-primary" id="confirmButton" type="button">finish Order</button></td>
+
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><button class="btn btn-primary" id="selectButton" type="button">select</button></td>
+        <td><input type="text" class="form-control" id="AmountofItem"placeholder="----" />
+        <button class="btn btn-primary" id="payButton" type="button">pay</button></td>
+        <td><button class="btn btn-primary" id="confirmButton" type="button">finish Order</button></td>
+
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><button class="btn btn-primary" id="selectButton" type="button">select</button></td>
+        <td><input type="text" class="form-control" id="AmountofItem"placeholder="----" />
+        <button class="btn btn-primary" id="payButton" type="button">pay</button></td>
+        <td><button class="btn btn-primary" id="confirmButton" type="button">finish Order</button></td>
+
+  </tr>
+</table>
+</div></div>
+      <h1>Make a Menu!!!</h1>
+      
+      <hr>
+
+      <div class="product-name">
+          <div class="='product-Amount'">
+              <div class="product-count">
+          
+      <label for="product"><b>product</b></label>
+      <input type="text" class="form-control" id="productName"placeholder="----" />
+  
+      <label for="Amount">Amount</label>
+      <input type="text" class="form-control" id="productAmount"placeholder="----" />
+  
+      <label for="-Address"><b>Address</b></label>
+      <input type="text" class="form-control" id="productAddress" placeholder="Address" />
+      <button class="btn btn-primary" id="selectButton" type="button">select</button>
+      <hr>
+      
+    </div>
+    </div>
+    </div>
+</div>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src="js/truffle-contract.js"></script>
+<script src="js/index.js"></script>
+
+</body>
 </html>
