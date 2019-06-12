@@ -6,15 +6,14 @@ contract CafeChain {
         uint value;
         address payable shop;
         bool complete;
-        uint orderCount;
         mapping(address => bool) selector;
+        uint orderCount;
     }
 
     Item[] public menu;
     address public manager;
     uint public minimumamount;
-    mapping(address => bool) buyer;
-    uint public custmorCount;
+
 
     modifier onlyowner() {
         require(msg.sender == manager);
@@ -35,14 +34,9 @@ contract CafeChain {
         menu.push(newItem);
     }
 
-    function selectItem(uint index) public {
-        Item storage item = menu[index];
-        buyer[msg.sender]=true;
-        custmorCount++;
-    }
+    
     function contribute(uint index) public payable {
         Item storage item = menu[index];
-        require(buyer[msg.sender]);
         require(msg.value==item.value);
         item.selector[msg.sender] = true;
         item.orderCount++;
@@ -52,6 +46,10 @@ contract CafeChain {
     require(!item.complete);
 
         item.shop.transfer(item.value);
-        item.complete =false;
+        item.complete =true;
     }  
+    function summary() public pure returns(string memory product, uint  value, address payable shop, uint orderCount) {
+        return (product,value,shop, orderCount);
+    }
+    
 }
