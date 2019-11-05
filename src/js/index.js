@@ -18,6 +18,7 @@ App = {
       }
   
       return App.initContract();
+        //This is a test
     },
   
     initContract: function() {
